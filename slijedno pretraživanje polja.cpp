@@ -24,7 +24,7 @@ int main(){
 	
 	
 	for( i = 0 ; i < n ; i++ ) {
-      x[i]=rand() % 100;
+      x[i]=rand() % 10+5;
    }
    
    for( i = 0 ; i < n ; i++ ) {
