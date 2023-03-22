@@ -47,17 +47,41 @@ void prosjek_oc(){
 
 	fclose(filePointer);
 	}
-	
-	
-	
-	
+	printf("Pritisnite bilo koju tipku za nastavak");
+	getch();
+
 	
 }
 
 
+void br_predmeta(){
+
+	FILE*filePointer;
+	filePointer=fopen("ocjene.txt","r");
+	while(fscanf(filePointer, "%s %s %d",o.ime, o.predmet, o.ocjena )){
+		
+	}
+	printf("broj predmeta je %s", o.predmet);
 
 
+	fclose(filePointer);
+	printf("Pritisnite bilo koju tipku za nastavak");
+	getch();
+	
+}
 
+
+void ispis(){
+	
+	FILE*filePointer;
+	filePointer=fopen("ocjene.txt","r");
+	
+	while(fscanf(filePointer, "%s %s %d",s.ime, s.predmet, s.ocjena)){
+	
+	}
+	
+	
+}
 
 
 
@@ -88,7 +112,7 @@ do{
 				prosjek_oc();
 				break;
 			case '3': 
-				//br_pred();
+				br_pred();
 				break;
 			case '4': 
 				//prosjek_pred();
