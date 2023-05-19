@@ -15,26 +15,30 @@ int main(void)
 	setbkcolor(2);
 	cleardevice();
 	setfillstyle(1,4);
-	int i=200,i2=200;
+	int i=200,i2=200, c=100;
 	do{
 		a=getch();
 		cleardevice();
 		switch(a){
 			case 'a':
 				i-=20;
+				c-=i<i2?10:0;
 				break;
 			case 'd':
 				i+=20;
+				c+=i<i2?10:0;
 				break;
 			case 'w':
 				i2-=20;
+				c-=i2<i?10:0;
 				break;
 			case 's':
 				i2+=20;
+				c+=i2<i?10:0;
 				break;
 				default:break;		}
 		
-		bar3d(x1, y1, x1+i, y1+i2, 20 ,1);
+		bar3d(x1, y1, x1+i, y1+i2, c ,1);
 		i++;
 		printf("%d\n", i);
 		delay(100);
